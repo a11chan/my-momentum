@@ -48,3 +48,11 @@ const randomNum = Math.floor(Math.random() * quotes.length);
 const todaysQuote = quotes[randomNum];
 quote.innerText = `${todaysQuote.quote} – `;
 author.innerText = todaysQuote.author;
+
+const quoteContainer = document.querySelector("#quote");
+function goToSource() {
+  window.open(
+    "https://dzone.com/articles/best-programming-jokes-amp-quotes","_blank"
+  );
+}
+quoteContainer.addEventListener("click",goToSource);

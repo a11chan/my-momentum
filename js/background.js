@@ -11,7 +11,5 @@ const images = [
   "https://source.unsplash.com/random/?Wallpapers",
 ]
 
-const chosenImage = Math.floor(Math.random() * images.length);
-const bgImage = document.createElement("img");
-bgImage.src = `${images[chosenImage]}`
-document.body.appendChild(bgImage);
+const pickedImageNumber = Math.floor(Math.random() * images.length);
+document.body.style.backgroundImage = `url(${images[pickedImageNumber]})`;
